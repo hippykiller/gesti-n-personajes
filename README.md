@@ -11,8 +11,8 @@ Proyecto de Estructuras de Datos, UNAB.
 ## Equipo
 
 - (nombres de los integrantes)
-*Julián Paradis 
-*Tomás Brasesco 
-*Gabriel Benítez Ibarrola 
-*Lucas Damián Carballo 
-*Lucas Gonzalez 
+-Julián Paradis 
+-Tomás Brasesco 
+-Gabriel Benítez Ibarrola 
+-Lucas Damián Carballo 
+-Lucas Gonzalez 
