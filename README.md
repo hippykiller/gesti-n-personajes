@@ -16,3 +16,4 @@ Proyecto de Estructuras de Datos, UNAB.
 -Gabriel Benítez Ibarrola 
 -Lucas Damián Carballo 
 -Lucas Gonzalez 
+-Rodrigo Olivera
