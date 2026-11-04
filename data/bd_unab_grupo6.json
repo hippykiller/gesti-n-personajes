@@ -1,0 +1,21 @@
+[
+{"type":"header","version":"5.2.1","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"bd_unab_grupo6"},
+{"type":"table","name":"inventario","database":"bd_unab_grupo6","data":
+[
+{"id_jugador":"1","id_item":"150","cantidad":"10"},
+{"id_jugador":"1","id_item":"101","cantidad":"1"}
+]
+}
+,{"type":"table","name":"items","database":"bd_unab_grupo6","data":
+[
+{"id_item":"101","nombre_item":"Espada Larga","Tipo_item":"Arma","Descripcion":"+5 Daño Espada Larga con forma de bombilla de mate."},
+{"id_item":"150","nombre_item":"Pocion de Vida","Tipo_item":"Consumible","Descripcion":"+50HP, MANAOS SABOR COLA QUE RECUPERA 50 HP"}
+]
+}
+,{"type":"table","name":"jugadores","database":"bd_unab_grupo6","data":
+[
+{"id_jugador":"1","Nombre":"pepe","Nivel":"10","Estadísticas":"Fuerza : 8 ; Agilidad: 10"}
+]
+}
+]
