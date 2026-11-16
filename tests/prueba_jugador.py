@@ -1,7 +1,5 @@
-
 from src.gestor.models.jugador import Estadisticas, Jugador
 from src.gestor.services.gestor_jugadores import GestorJugadores
-
 
 # Creamos las estadísticas
 estadisticas1 = Estadisticas(100, 80, 65, 90, 50)
@@ -49,12 +47,7 @@ print("Nuevo nivel:", jugador1.nivel)
 
 
 # Modificamos varios datos
-gestor.modificar_jugador(
-    1,
-    nombre="Tomás",
-    nivel=30,
-    magia=95
-)
+gestor.modificar_jugador(1, nombre="Tomás", nivel=30, magia=95)
 
 print("Nombre:", jugador1.nombre)
 print("Nivel:", jugador1.nivel)

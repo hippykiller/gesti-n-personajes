@@ -1,17 +1,21 @@
-"""Módulo: app.py Descripción: Controlador principal de navegación y flujo de la aplicación de consola para el sistema de gestión."""
+"""
+Módulo: app.py
+Descripción: Controlador principal de navegación y flujo
+de la aplicación de consola para el sistema de gestión.
+"""
 
-from typing import Callable
+from collections.abc import Callable
 
 # Importación de las funciones de pantalla y utilidades desde menu.py
 from gestor.ui.menu import (
-    limpiar_pantalla,
     leer_opcion,
-    mostrar_menu_principal,
+    limpiar_pantalla,
+    mostrar_menu_consultas,
+    mostrar_menu_inventarios,
+    mostrar_menu_items,
     mostrar_menu_jugadores,
     mostrar_menu_personajes,
-    mostrar_menu_items,
-    mostrar_menu_inventarios,
-    mostrar_menu_consultas,
+    mostrar_menu_principal,
 )
 
 

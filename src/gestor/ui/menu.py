@@ -1,6 +1,7 @@
 """
 Módulo: menu.py
-Descripción: Funciones de presentación y utilidades de consola para renderizar los menús y validar las entradas.
+Descripción: Funciones de presentación y utilidades de consola
+para renderizar los menús y validar las entradas.
 """
 
 import os
@@ -13,7 +14,7 @@ def limpiar_pantalla() -> None:
 
 def leer_opcion(mensaje: str, opciones_validas: tuple[int, ...]) -> int:
     """
-    Solicita una opción por consola y valida que sea un entero dentro de las opciones permitidas.
+    Solicita una opción y valida que sea un entero permitido.
     """
     while True:
         try:
@@ -21,7 +22,8 @@ def leer_opcion(mensaje: str, opciones_validas: tuple[int, ...]) -> int:
             if opcion in opciones_validas:
                 return opcion
             print(
-                f" Error: Opción no válida. Elija una de las siguientes: {opciones_validas}"
+                " Error: Opción no válida. "
+                f"Elija una de las siguientes: {opciones_validas}"
             )
         except ValueError:
             print(" Error: Debe ingresar un número entero.")
