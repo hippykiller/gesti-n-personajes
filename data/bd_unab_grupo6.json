@@ -1,0 +1,12 @@
+{
+  "jugadores": [
+    {
+      "id_jugador": 1,
+      "nombre_user": "JulianP",
+      "contrasena_hash": "fake_hash_123",
+      "personaje_elegido": "Guerrero",
+      "id_inventario": 100,
+      "estado_cuenta": true
+    }
+  ]
+}
