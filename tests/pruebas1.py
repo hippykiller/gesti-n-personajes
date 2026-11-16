@@ -1,8 +1,7 @@
 import os
 import sys
-sys.path.insert(
-    0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../src"))
-)
+
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "../src")))
 from gestor.validaciones import (
     pedir_entero,
     pedir_entero_positivo,
@@ -10,6 +9,7 @@ from gestor.validaciones import (
     pedir_si_o_no,
     pedir_texto,
 )
+
 print("--- INICIANDO PRUEBAS DE VALIDACIONES ---")
 
 # 1. La que ya probaste y funcionó
@@ -29,9 +29,7 @@ print(f"¡Funcionó! El texto ingresado es: '{texto}'")
 
 # 4. Probar pedir_opcion
 print("\n[4] Probando pedir_opcion:")
-opcion = pedir_opcion(
-    "Elija una opción (a, b, c): ", opciones_validas=["a", "b", "c"]
-)
+opcion = pedir_opcion("Elija una opción (a, b, c): ", opciones_validas=["a", "b", "c"])
 print(f"¡Funcionó! Opción elegida: '{opcion}'")
 
 # 5. Probar pedir_si_o_no
@@ -40,4 +38,3 @@ respuesta = pedir_si_o_no("¿Te gusta este sistema?")
 print(f"¡Funcionó! Resultado booleano: {respuesta}")
 
 print("\n¡Todas las pruebas finalizaron!")
-

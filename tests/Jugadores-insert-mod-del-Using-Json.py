@@ -25,7 +25,7 @@ def obtener_tabla_jugadores(datos):
 
 def cargar_gestor_desde_json(ruta_archivo):
     """Lee el JSON y llena un objeto GestorJugadores con instancias de Jugador."""
-    with open(ruta_archivo, "r", encoding="utf-8") as f:
+    with open(ruta_archivo, encoding="utf-8") as f:
         datos = json.load(f)
 
     gestor = GestorJugadores()
@@ -64,19 +64,21 @@ def guardar_gestor_en_json(ruta_archivo, datos, gestor):
     lista_serializada = []
 
     for j in gestor.jugadores:
-        lista_serializada.append({
-            "id_jugador": str(j.id_jugador),
-            "nombre": j.nombre,
-            "clase": j.clase,
-            "nivel": str(j.nivel),
-            "estadisticas": {
-                "vida": j.estadisticas.vida,
-                "fuerza": j.estadisticas.fuerza,
-                "defensa": j.estadisticas.defensa,
-                "inteligencia": j.estadisticas.inteligencia,
-                "magia": j.estadisticas.magia,
-            },
-        })
+        lista_serializada.append(
+            {
+                "id_jugador": str(j.id_jugador),
+                "nombre": j.nombre,
+                "clase": j.clase,
+                "nivel": str(j.nivel),
+                "estadisticas": {
+                    "vida": j.estadisticas.vida,
+                    "fuerza": j.estadisticas.fuerza,
+                    "defensa": j.estadisticas.defensa,
+                    "inteligencia": j.estadisticas.inteligencia,
+                    "magia": j.estadisticas.magia,
+                },
+            }
+        )
 
     # Reemplazamos la lista 'data' dentro de la tabla 'jugadores'
     for tabla in datos:
@@ -175,5 +177,3 @@ def dar_baja_jugador(datos, gestor):
             print(f"[!] No se encontró un jugador con ID {id_j}.")
     except ValueError:
         print("[!] El ID debe ser un número entero.")
-
-

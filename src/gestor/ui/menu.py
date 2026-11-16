@@ -1,51 +1,87 @@
-def mostrarMenu(n1):
+"""
+Módulo: menu.py
+Descripción: Funciones de presentación y utilidades de consola
+para renderizar los menús y validar las entradas.
+"""
 
-    #ESTOY INTENTANDO HACER QUE SE MUESTRE EL MENSAJE POR LO MENOS 1 VEZ Y LUEGO INTENTAR
-    #QUE EN CASO DE QUE Opcion1 Sea Distinto de 0 vuelva a enviar todos los print
-    #Y en CASO DE QUE Opcion1 Sea Igual a 0 Termine el Programa.
-    #Estoy usando While y Ok como variable bool.
-    #Pero sigue sin funcionar y nose porque
-    Ok = True
-    Opcion1 = n1
-    if(Opcion1 != 0):
-        while Ok:
-            
-            print("========================================","\nMI SISTEMA — MENÚ PRINCIPAL", "\n========================================")
-            print(1,". Buscar elemento")
-            print(2,". Explorar por categorías")
-            print(3,". Listar todo ordenado")
-            print(4,". Agregar elemento")
-            print(5,". Eliminar elemento")
-            print(6,". Deshacer última operación")
-            print(7,". Ver estadísticas")
-            print(0,". Salir")
-            print("----------------------------------------")
-            Opcion2 = int(input("Opción:"))
-            Opcion1 = Opcion2
-            if(Opcion1 == 0):
-                Ok = False
-                print("Saliendo del programa")
-    return Opcion1
-
-#MAIN    
-m1 = 9
-m1 = mostrarMenu(m1)
-print(m1)
+import os
 
 
+def limpiar_pantalla() -> None:
+    """Limpia la consola según el sistema operativo."""
+    os.system("cls" if os.name == "nt" else "clear")
 
 
+def leer_opcion(mensaje: str, opciones_validas: tuple[int, ...]) -> int:
+    """
+    Solicita una opción y valida que sea un entero permitido.
+    """
+    while True:
+        try:
+            opcion = int(input(mensaje))
+            if opcion in opciones_validas:
+                return opcion
+            print(
+                " Error: Opción no válida. "
+                f"Elija una de las siguientes: {opciones_validas}"
+            )
+        except ValueError:
+            print(" Error: Debe ingresar un número entero.")
 
 
+def mostrar_encabezado(titulo: str) -> None:
+    """Imprime un encabezado con formato en la consola."""
+    print("\n" + "=" * 40)
+    print(f" {titulo}")
+    print("=" * 40)
 
-""" ========================================
-1. Buscar elemento
-2. Explorar por categorías
-3. Listar todo ordenado
-4. Agregar elemento
-5. Eliminar elemento
-6. Deshacer última operación
-7. Ver estadísticas
-0. Salir
-----------------------------------------
-Opción:") """
+
+def mostrar_menu_principal() -> None:
+    """Muestra las opciones del menú principal del sistema."""
+    mostrar_encabezado("SISTEMA DE GESTIÓN - MENÚ PRINCIPAL")
+    print("1. Gestión de Jugadores")
+    print("2. Gestión de Personajes")
+    print("3. Gestión de Ítems")
+    print("4. Gestión de Inventarios")
+    print("5. Consultas")
+    print("0. Salir")
+
+
+def mostrar_menu_jugadores() -> None:
+    """Muestra las opciones del submenú de jugadores."""
+    mostrar_encabezado("GESTIÓN DE JUGADORES")
+    print("1. Crear Jugador")
+    print("2. Buscar Jugador")
+    print("0. Regresar al Menú Principal")
+
+
+def mostrar_menu_personajes() -> None:
+    """Muestra las opciones del submenú de personajes."""
+    mostrar_encabezado("GESTIÓN DE PERSONAJES")
+    print("1. Crear Personaje")
+    print("2. Buscar Personaje")
+    print("0. Regresar al Menú Principal")
+
+
+def mostrar_menu_items() -> None:
+    """Muestra las opciones del submenú de ítems."""
+    mostrar_encabezado("GESTIÓN DE ÍTEMS")
+    print("1. Registrar Ítem")
+    print("2. Buscar Ítem")
+    print("0. Regresar al Menú Principal")
+
+
+def mostrar_menu_inventarios() -> None:
+    """Muestra las opciones del submenú de inventarios."""
+    mostrar_encabezado("GESTIÓN DE INVENTARIOS")
+    print("1. Asignar Ítem a un Personaje")
+    print("2. Consultar Inventario")
+    print("0. Regresar al Menú Principal")
+
+
+def mostrar_menu_consultas() -> None:
+    """Muestra las opciones del submenú de consultas."""
+    mostrar_encabezado("CONSULTAS")
+    print("1. Consultar Personajes")
+    print("2. Consultar Inventarios")
+    print("0. Regresar al Menú Principal")

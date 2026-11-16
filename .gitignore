@@ -16,3 +16,4 @@ build/
 .DS_Store
 data/*.json
 !data/.gitkeep
+!data/bd_unab_grupo6.json
